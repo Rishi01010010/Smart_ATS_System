@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ATS Resume Scanner</h1>
+        <form id="ats-form">
+            <div class="form-group">
+                <label for="resume" style="color: white;">Upload Resume (PDF)</label>
+                <div class="custom-file-upload">
+                    <input type="file" id="resume" name="resume" accept=".pdf" required>
+                    <span id="file-label">Choose file</span>
+                    <span id="pdf-icon" class="hidden">&#128196;</span> <!-- PDF icon -->
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="job-description" style="color: white;">Job Description</label>
+                <textarea id="job-description" name="jobDescription" rows="10" placeholder="Enter job description here..." required></textarea>
+            </div>
+            <button type="submit">Scan</button>
+        </form>
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <div class="result-block" id="percentage-match">ATS Score: </div>
+            <div class="result-block" id="resume-skills">Resume Skills: </div>
+            <div class="result-block" id="job-description-skills">Job Description Skills: </div>
+            <div class="result-block" id="lacking-skills">Lacking Skills: </div>
+            <div class="result-block" id="extra-skills">Extra Skills: </div>
+            <div class="result-block" id="matched-skills">Matched Skills: </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

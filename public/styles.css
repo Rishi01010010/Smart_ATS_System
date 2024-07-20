@@ -1,0 +1,172 @@
+/* Add a custom font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Ensure body does not scroll */
+    background: url(back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container {
+    /* background-color: #fff; */
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    overflow-y: auto; /* Enable scrolling within the container */
+    max-height: 90vh; /* Ensure the container doesn't exceed viewport height */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+/* Update heading styles */
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    background: linear-gradient(90deg, rgb(17, 0, 255), #000000 );
+    -webkit-background-clip: text; /* For WebKit browsers */
+    -moz-background-clip: text; /* For Mozilla Firefox */
+    background-clip: text; /* Standard syntax */
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.custom-file-upload {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.custom-file-upload input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    opacity: 0; /* Hide the default file input */
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#file-label {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#pdf-icon {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Updated textarea styles */
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #0056b3;
+    background-color: #e9f0ff;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 30px;
+}
+
+#results.hidden {
+    display: none;
+}
+
+#results h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.result-block {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
